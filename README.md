@@ -12,3 +12,8 @@ There are three main types of clouds: private cloud, public cloud, and hybrid cl
 ### Architecture of project
 ![Alt text](abc.drawio.png)
 
+# Implementation
+
++ Public cloud: Virtual machine
+
++ Private cloud: simulated or virtual machine
