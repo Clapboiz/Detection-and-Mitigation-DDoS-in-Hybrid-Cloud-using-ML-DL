@@ -1,13 +1,13 @@
 #Tool download paper: ```scihub```
 
-**Main paper**
+# **Main paper**
 # SDMTA: Attack Detection and Mitigation Mechanism for DDoS Vulnerabilities in Hybrid Cloud Environment
 
 **doi: 10.1109/TII.2022.3146290**
 
 SDMTA
 
-**Sub papers**
+# **Sub papers**
 # Detection and mitigation of DDoS attack in cloud computing using machine learning algorithm
 
 **doi:10.4108/eai.29-7-2019.159834**
