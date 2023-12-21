@@ -13,7 +13,7 @@ Sử dụng Kong APi Gateway sau đó sẽ deploy lên azure = k8s, chứ ko s�
 
 + Authenticate + Authorize cho thằng admin và user trước (Trước hết cứ dùng postman để gọi đã khi nào nguyên dev xong r test trên code Nguyên)
 
-**Lập**
+**Lập:**
 
 + Train model ML/DL sau đó tích hợp mô hình vào web
 + Deploy kong api gateway lên azure
