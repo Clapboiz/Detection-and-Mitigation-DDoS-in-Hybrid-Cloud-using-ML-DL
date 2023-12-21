@@ -1,4 +1,4 @@
-# Detection-and-Mitigation-DDoS-in-Hybrid-Cloud-using-ML-DL
+# DETECTION-AND-MITIGATION-DDOS-IN-HYBRID-CLOUD-USING-ML-DL
 Application Layer in OSI Model
 
 There are three main types of clouds: private cloud, public cloud, and hybrid cloud.
@@ -9,11 +9,19 @@ There are three main types of clouds: private cloud, public cloud, and hybrid cl
 
 + hybrid cloud: A combination of both public and private cloud
 
-## What is Microservice 
+## WHAT IS MICROSERVICE 
 
 Microservices architecture is a software development method in which a large application is built as a set of small, independent services that communicate with each other through APIs (Application Programming Interfaces). clearly defined. Each microservice is designed to perform a specific function and can be developed, deployed, and scaled independently.
 
 This architectural model contrasts with monolithic architecture, in which an application is built as a tightly integrated unit.
+
+<p align="center">
+  <img alt="microservices-logical" src="https://github.com/Clapboiz/Detection-and-Mitigation-DDoS-in-Hybrid-Cloud-using-ML-DL/assets/112185647/c4ffcae3-7931-442e-b5ad-5bd939fee846">
+</p>
+
+<p align="center">
+  Figure 1: Microservices architecture
+</p>
 
 **Important characteristics of microservices architecture include:**
 
@@ -37,7 +45,7 @@ This architectural model contrasts with monolithic architecture, in which an app
 
 **It is very difficult to debug code**
 
-## Kong api gateway vs aws api gateway vs azure api gateway
+### KONG API GATEWAY VS AWS API GATEWAY VS AZURE API GATEWAY
 
 | **Feature / Criteria**      | **Kong API Gateway**                     | **AWS API Gateway**                      | **Azure API Gateway**                    |
 |-----------------------------|-----------------------------------------|-----------------------------------------|-----------------------------------------|
@@ -52,12 +60,18 @@ This architectural model contrasts with monolithic architecture, in which an app
 | **Ecosystem Compatibility**  | Compatible with various ecosystems | Integrated with AWS services and serverless ecosystem | Integrated with Azure services and serverless ecosystem |
 | **Community Support**        | Active open-source community, enterprise support available | Well-documented, AWS community support | Well-documented, Microsoft Azure community support |
 
-=> In this project we use Azure api gateway
+**_=> In this project we use Azure api gateway_**
 
-### Architecture of project
-![abc drawio](https://github.com/Clapboiz/Detection-and-Mitigation-DDoS-in-Hybrid-Cloud-using-ML-DL/assets/112185647/8ad90bbe-6abe-49ec-9c7c-6abcfe6b6b1f)
+## ARCHITECTURE OF PROJECT
+<p align="center">
+  <img alt="Project_architerture" src="https://github.com/Clapboiz/Detection-and-Mitigation-DDoS-in-Hybrid-Cloud-using-ML-DL/assets/112185647/a8959dfc-2cf8-412c-9090-ca914251b64f">
+</p>
 
-# Implementation
+<p align="center">
+  Figure 2: Project architecture
+</p>
+
+## IMPLEMENTATION
 
 + Public cloud: Virtual machine
 
@@ -74,3 +88,10 @@ This architectural model contrasts with monolithic architecture, in which an app
 | **Scalability**                      | Users can manually configure and scale resources up or down based on their requirements. Scaling is often more granular and under the control of the user. | Scaling is usually automatic and managed by the platform. The platform itself handles resource allocation and scaling based on application demand. |
 | **Use Cases**                       | Suitable for users who need more control over the infrastructure and want to manage the entire software stack, including applications. | Ideal for developers who want to focus on building and deploying applications without dealing with the complexities of infrastructure management. |
 | **Examples**                         | Amazon Web Services (AWS) EC2, Microsoft Azure Virtual Machines, Google Cloud Compute Engine. | Heroku, Google App Engine, Microsoft Azure App Service. |
+
+
+## REFERENCES
+
+[1]. S. Kautish, R. A and A. Vidyarthi, "SDMTA: Attack Detection and Mitigation Mechanism for DDoS Vulnerabilities in Hybrid Cloud Environment," in IEEE Transactions on Industrial Informatics, vol. 18, no. 9, pp. 6455-6463, Sept. 2022, doi: 10.1109/TII.2022.3146290.
+
+[2]. https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices
