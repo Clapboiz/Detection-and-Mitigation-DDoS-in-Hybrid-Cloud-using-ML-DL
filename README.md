@@ -9,8 +9,37 @@ There are three main types of clouds: private cloud, public cloud, and hybrid cl
 
 + hybrid cloud: A combination of both public and private cloud
 
+## What is Microservice 
+
+Microservices architecture is a software development method in which a large application is built as a set of small, independent services that communicate with each other through APIs (Application Programming Interfaces). clearly defined. Each microservice is designed to perform a specific function and can be developed, deployed, and scaled independently.
+
+This architectural model contrasts with monolithic architecture, in which an application is built as a tightly integrated unit.
+
+**Important characteristics of microservices architecture include:**
+
++ Modularity: The application is divided into small services, each responsible for a certain function.
+
++ Independence: Microservices are developed and deployed independently. This means that changes in one microservice do not necessarily cause changes in other microservices.
+
++ Scalability: Each microservice can be scaled independently based on its specific resource requirements, allowing for better utilization of resources.
+
++ Fault Tolerance: Since each microservice is a separate entity, if one service fails, this does not necessarily affect the entire system. This helps build fault-tolerant and consistent systems.
+
++ Technology Diversity: Different microservices can be developed using different technologies and programming languages, as long as they comply with the specified interfaces.
+
++ Continuous Development and Deployment: Microservices support continuous integration and continuous development/deployment (CI/CD) practices, enabling faster and more frequent releases.
+
++ Ease of Maintenance: The modularity of microservices simplifies maintenance and updates, as changes can be isolated to specific services without affecting the entire application. Easy to read code
+
+**However, it should also be noted that although microservices architecture brings many benefits, it also poses challenges, such as increased communication over the network, data consistency challenges, and the need for management and Discover effective service.**
+
+**Implementing microservices requires careful planning and design to achieve the full benefits and manage the complex aspects associated with this architectural model.**
+
+**It is very difficult to debug code**
+
+
 ### Architecture of project
-![Alt text](Architecture.png)
+![abc drawio](https://github.com/Clapboiz/Detection-and-Mitigation-DDoS-in-Hybrid-Cloud-using-ML-DL/assets/112185647/8ad90bbe-6abe-49ec-9c7c-6abcfe6b6b1f)
 
 # Implementation
 
