@@ -37,6 +37,22 @@ This architectural model contrasts with monolithic architecture, in which an app
 
 **It is very difficult to debug code**
 
+## Kong api gateway vs aws api gateway vs azure api gateway
+
+| **Feature / Criteria**      | **Kong API Gateway**                     | **AWS API Gateway**                      | **Azure API Gateway**                    |
+|-----------------------------|-----------------------------------------|-----------------------------------------|-----------------------------------------|
+| **Architecture & Deployment**| Open-source <br> On-premises (On-premise allows businesses to have full control over their data) <br> Cloud          | AWS-managed cloud service               | Azure-managed cloud service              |
+| **Key Features**             | API management, authentication, monitoring, traffic management | User management, authentication, access control, API monitoring | Traffic management, security, authentication, monitoring |
+| **Integration**              | Flexible integration with various backends and databases | Tight integration with AWS ecosystem (Lambda, S3, CloudWatch) | Deep integration with Azure services     |
+| **Performance & Scaling**    | Uses Nginx for high performance, scalable deployment | Flexible and auto-scaling based on demand, integrates with AWS services for optimization | Scalable and flexible, integrates with various Azure services |
+| **Cost**                     | Free open-source version, Enterprise version pricing based on features and support | Pay-as-you-go pricing based on usage, API calls, and features | Pay-as-you-go pricing based on usage and features |
+| **Flexibility**              | Independent and adaptable to various ecosystems | Tightly integrated with AWS services, optimized for AWS environment | Deep integration with Azure services, adaptable to Azure environment |
+| **Ease of Integration**      | Moderate learning curve, adaptable to various environments | Seamless integration with AWS services, AWS Lambda for serverless integration | Smooth integration with Azure services, Azure Functions for serverless |
+| **Scalability**              | Easily scalable, flexible deployment options | Auto-scaling based on demand, scalable architecture | Scalable architecture, adapts to changing workloads |
+| **Ecosystem Compatibility**  | Compatible with various ecosystems | Integrated with AWS services and serverless ecosystem | Integrated with Azure services and serverless ecosystem |
+| **Community Support**        | Active open-source community, enterprise support available | Well-documented, AWS community support | Well-documented, Microsoft Azure community support |
+
+=> In this project we use Azure api gateway
 
 ### Architecture of project
 ![abc drawio](https://github.com/Clapboiz/Detection-and-Mitigation-DDoS-in-Hybrid-Cloud-using-ML-DL/assets/112185647/8ad90bbe-6abe-49ec-9c7c-6abcfe6b6b1f)
