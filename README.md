@@ -60,7 +60,7 @@ This architectural model contrasts with monolithic architecture, in which an app
 | **Ecosystem Compatibility**  | Compatible with various ecosystems | Integrated with AWS services and serverless ecosystem | Integrated with Azure services and serverless ecosystem |
 | **Community Support**        | Active open-source community, enterprise support available | Well-documented, AWS community support | Well-documented, Microsoft Azure community support |
 
-**_=> In this project we use Azure api gateway_**
+**_=> In this project we use Kong Api Gateway_**
 
 ## ARCHITECTURE OF PROJECT
 <p align="center">
