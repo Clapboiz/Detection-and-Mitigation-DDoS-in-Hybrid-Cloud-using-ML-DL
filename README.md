@@ -94,4 +94,6 @@ This architectural model contrasts with monolithic architecture, in which an app
 
 [1]. S. Kautish, R. A and A. Vidyarthi, "SDMTA: Attack Detection and Mitigation Mechanism for DDoS Vulnerabilities in Hybrid Cloud Environment," in IEEE Transactions on Industrial Informatics, vol. 18, no. 9, pp. 6455-6463, Sept. 2022, doi: 10.1109/TII.2022.3146290.
 
-[2]. https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices
+[2]. Lavian, S., & Ariel University, Ariel Cyber Innovation Center (ACIC). (2023). The API Traffic Research Dataset Framework (ATRDF) [Data set]. https://github.com/ArielCyber/Cisco_Ariel_Uni_API_security_challenge
+
+[3]. https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices

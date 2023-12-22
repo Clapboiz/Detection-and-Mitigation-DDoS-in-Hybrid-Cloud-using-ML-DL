@@ -269,7 +269,7 @@ def vectorize_df(df):
     return df
 
 df = vectorize_df(df)
-# print(df.head())
+print(df.head())
 
 
 features_list = df.columns.to_list()
