@@ -112,8 +112,9 @@
                         document.getElementById('response').innerText = data.success;
                         document.getElementById('response').style.display = "block";
                         document.getElementById('response').classList.add("alert-success");
-                        window.location.reload();
-                        window.location.reload();
+                        setTimeout(() => {
+                            window.location.href = "http://localhost:3000/user";
+                        }, 500);
                     }
                 })
                 .catch(error => {
