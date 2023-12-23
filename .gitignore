@@ -1,4 +1,6 @@
 # skip file and folder 
 Datasets/*.json
 
-__pycache__/
+__pycache__
+
+node_modules
