@@ -19,4 +19,5 @@ Sử dụng Kong APi Gateway sau đó sẽ deploy lên azure = k8s, chứ ko s�
 + Deploy kong api gateway lên azure
 
 **Công việc sau cùng:**
+
 Block khi phát hiện tấn công web

@@ -1,0 +1,4 @@
+# skip file and folder 
+Datasets/*.json
+
+__pycache__/
