@@ -31,169 +31,180 @@ app.use(bodyParser.json());
 
 app.use(cookieParser());
 
-app.get('/dangki', (req, res) => {
-    res.render('dangki.ejs');
+app.get('/admin', (req, res) => {
+    res.render('admin.ejs');
 });
 
-app.get('/giohang', (req, res) => {
-    return res.render('giohang.ejs');
+app.get('/user', (req, res) => {
+    res.render('user.ejs');
 });
 
-const getUser = async (user) => {
-    const select = `SELECT * from User WHERE username=?`;
-    return new Promise((resolve, reject) => {
-        db.all(select, [user.username], async (err, rows) => {
-            if (err) {
-                reject(err);
-            } else {
-                console.log("rows: ", rows);
-                let result = {};
-                for (let i = 0; i < rows.length; i++) {
-                    const row = rows[i];
-                    const c = await compare(user.password, row.password);
-                    if (c) result = row;
-                }
-                resolve(result);
-            }
-        });
-    });
-}
+/* app.get('/dangki', (req, res) => { */
+/*     res.render('dangki.ejs'); */
+/* }); */
+/**/
+/* app.get('/giohang', (req, res) => { */
+/*     return res.render('giohang.ejs'); */
+/* }); */
+/**/
+/* const getUser = async (user) => { */
+/*     const select = `SELECT * from User WHERE username=?`; */
+/*     return new Promise((resolve, reject) => { */
+/*         db.all(select, [user.username], async (err, rows) => { */
+/*             if (err) { */
+/*                 reject(err); */
+/*             } else { */
+/*                 console.log("rows: ", rows); */
+/*                 let result = {}; */
+/*                 for (let i = 0; i < rows.length; i++) { */
+/*                     const row = rows[i]; */
+/*                     const c = await compare(user.password, row.password); */
+/*                     if (c) result = row; */
+/*                 } */
+/*                 resolve(result); */
+/*             } */
+/*         }); */
+/*     }); */
+/* } */
+/**/
+/* app.get('/user', async (req, res) => { */
+/*     const token = req.cookies.jwtToken; */
+/*     if (token) { */
+/*         try { */
+/*             const decoded = jwt.verify(token, jwtSecretKey); */
+/*             const user = await getUser(decoded.user); */
+/*             console.log(user); */
+/*             return res.render('userprofile.ejs', { user: user }); */
+/*         } catch (err) { */
+/*             // Handle token verification errors */
+/*             return res.status(401).json({ error: 'Invalid token' }); */
+/*         } */
+/*     } else { */
+/*         // No token found in the cookie */
+/*         return res.status(401).json({ error: 'Unauthorized' }); */
+/*     } */
+/* }); */
+/**/
+/* app.get('/dangnhap', (req, res) => { */
+/*     return res.render('dangnhap.ejs'); */
+/* }); */
+/**/
+/* app.post('/dangki', async (req, res) => { */
+/*     console.log(req.body); */
+/*     const user = req.body; */
+/*     user.password = await hash(user.password); */
+/*     const userExist = await checkIfUsernameExist(user.username); */
+/*     if (userExist) { */
+/*         return res.json({ */
+/*             error: "User already exist" */
+/*         });user */
+/*     } else { */
+/*         await addNewUser(user); */
+/**/
+/*         const token = jwt.sign({ user: user.username }, jwtSecretKey); */
+/*         return res.json({ */
+/*             success: "User added successfully", */
+/*             token: token */
+/*         }); */
+/*     } */
+/* }); */
+/**/
+/* app.post('/dangxuat', (req, res) => { */
+/*     res.clearCookie('jwtToken'); // Clear the token cookie on logout */
+/*     return res.status(200).json({ success: 'User logged out successfully' }); */
+/* }); */
+/**/
+/* const hash = async (password) => { */
+/*     return new Promise((resolve, reject) => { */
+/*         bcrypt.hash(password, saltRounds, function (err, hash) { */
+/*             if (err) { */
+/*                 reject(err); */
+/*             } else { */
+/*                 resolve(hash); */
+/*             } */
+/*         }); */
+/*     }); */
+/* }; */
+/**/
+/* app.post('/dangnhap', async (req, res) => { */
+/*     console.log(req.body); */
+/*     const user = req.body; */
+/*     const userExist = await checkIfUserExist(user); */
+/*     console.log('user exist: ', userExist); */
+/*     if (userExist) { */
+/*         const token = jwt.sign({ user: user.username }, jwtSecretKey); */
+/*         res.cookie('jwtToken', token, { httpOnly: true }); */
+/*         return res.json({ */
+/*             success: 'User login successfully', */
+/*             token: token, */
+/*         }); */
+/*     } else { */
+/*         return res.status(401).json({ */
+/*             error: 'Invalid credentials', */
+/*         }); */
+/*     } */
+/* }); */
+/**/
+/**/
+/* // Compare a plaintext password with a hashed password */
+/* const compare = async (plaintextPassword, hashedPassword) => { */
+/*     return new Promise((resolve, reject) => { */
+/*         bcrypt.compare(plaintextPassword, hashedPassword, function (err, result) { */
+/*             if (err) { */
+/*                 reject(err); */
+/*             } else { */
+/*                 resolve(result); */
+/*             } */
+/*         }); */
+/*     }); */
+/* }; */
+/**/
+/* const checkIfUserExist = async (user) => { */
+/*     const select = `SELECT * from User WHERE username=?`; */
+/*     return new Promise((resolve, reject) => { */
+/*         db.all(select, [user.username], async (err, rows) => { */
+/*             if (err) { */
+/*                 reject(err); */
+/*             } else { */
+/*                 console.log("rows: ", rows); */
+/*                 let result = false; */
+/*                 for (let i = 0; i < rows.length; i++) { */
+/*                     const row = rows[i]; */
+/*                     const c = await compare(user.password, row.password); */
+/*                     if (c) result = true; */
+/*                 } */
+/*                 resolve(result); */
+/*             } */
+/*         }); */
+/*     }); */
+/* } */
+/**/
+/* const checkIfUsernameExist = async (username) => { */
+/*     const select = `SELECT * from User WHERE username=?`; */
+/*     return new Promise((resolve, reject) => { */
+/*         console.log("username: " + username) */
+/*         db.all(select, [username], async (err, rows) => { */
+/*             if (err) { */
+/*                 reject(err); */
+/*             } else { */
+/*                 console.log("rows: ", rows); */
+/*                 resolve(rows.length > 0); */
+/*             } */
+/*         }); */
+/*     }); */
+/* } */
+/**/
+/* const addNewUser = async(user) => { */
+/*     // TODO: hash the password first  */
+/*     console.log("add new user: ", user); */
+/*     const insertusersql = `INSERT INTO User(username, name, email, password, phonenumber) VALUES (?, ?, ?, ?, ?)`; */
+/*     db.run(insertusersql, [user.username, user.name, user.email, user.password, user.phonenumber], (err) => { */
+/*         if(err) return console.error(err.message); */
+/*     }); */
+/* } */
 
-app.get('/user', async (req, res) => {
-    const token = req.cookies.jwtToken;
-    if (token) {
-        try {
-            const decoded = jwt.verify(token, jwtSecretKey);
-            const user = await getUser(decoded.user);
-            console.log(user);
-            return res.render('userprofile.ejs', { user: user });
-        } catch (err) {
-            // Handle token verification errors
-            return res.status(401).json({ error: 'Invalid token' });
-        }
-    } else {
-        // No token found in the cookie
-        return res.status(401).json({ error: 'Unauthorized' });
-    }
-});
 
-app.get('/dangnhap', (req, res) => {
-    return res.render('dangnhap.ejs');
-});
-
-app.post('/dangki', async (req, res) => {
-    console.log(req.body);
-    const user = req.body;
-    user.password = await hash(user.password);
-    const userExist = await checkIfUsernameExist(user.username);
-    if (userExist) {
-        return res.json({
-            error: "User already exist"
-        });user
-    } else {
-        await addNewUser(user);
-
-        const token = jwt.sign({ user: user.username }, jwtSecretKey);
-        return res.json({
-            success: "User added successfully",
-            token: token
-        });
-    }
-});
-
-app.post('/dangxuat', (req, res) => {
-    res.clearCookie('jwtToken'); // Clear the token cookie on logout
-    return res.status(200).json({ success: 'User logged out successfully' });
-});
-
-const hash = async (password) => {
-    return new Promise((resolve, reject) => {
-        bcrypt.hash(password, saltRounds, function (err, hash) {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(hash);
-            }
-        });
-    });
-};
-
-app.post('/dangnhap', async (req, res) => {
-    console.log(req.body);
-    const user = req.body;
-    const userExist = await checkIfUserExist(user);
-    console.log('user exist: ', userExist);
-    if (userExist) {
-        const token = jwt.sign({ user: user.username }, jwtSecretKey);
-        res.cookie('jwtToken', token, { httpOnly: true });
-        return res.json({
-            success: 'User login successfully',
-            token: token,
-        });
-    } else {
-        return res.status(401).json({
-            error: 'Invalid credentials',
-        });
-    }
-});
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 });
-
-// Compare a plaintext password with a hashed password
-const compare = async (plaintextPassword, hashedPassword) => {
-    return new Promise((resolve, reject) => {
-        bcrypt.compare(plaintextPassword, hashedPassword, function (err, result) {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(result);
-            }
-        });
-    });
-};
-
-const checkIfUserExist = async (user) => {
-    const select = `SELECT * from User WHERE username=?`;
-    return new Promise((resolve, reject) => {
-        db.all(select, [user.username], async (err, rows) => {
-            if (err) {
-                reject(err);
-            } else {
-                console.log("rows: ", rows);
-                let result = false;
-                for (let i = 0; i < rows.length; i++) {
-                    const row = rows[i];
-                    const c = await compare(user.password, row.password);
-                    if (c) result = true;
-                }
-                resolve(result);
-            }
-        });
-    });
-}
-
-const checkIfUsernameExist = async (username) => {
-    const select = `SELECT * from User WHERE username=?`;
-    return new Promise((resolve, reject) => {
-        console.log("username: " + username)
-        db.all(select, [username], async (err, rows) => {
-            if (err) {
-                reject(err);
-            } else {
-                console.log("rows: ", rows);
-                resolve(rows.length > 0);
-            }
-        });
-    });
-}
-
-const addNewUser = async(user) => {
-    // TODO: hash the password first 
-    console.log("add new user: ", user);
-    const insertusersql = `INSERT INTO User(username, name, email, password, phonenumber) VALUES (?, ?, ?, ?, ?)`;
-    db.run(insertusersql, [user.username, user.name, user.email, user.password, user.phonenumber], (err) => {
-        if(err) return console.error(err.message);
-    });
-}
