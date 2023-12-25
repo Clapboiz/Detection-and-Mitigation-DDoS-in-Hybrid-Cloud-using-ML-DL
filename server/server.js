@@ -1,11 +1,14 @@
 // TODO: add jwt to this
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 5000;
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const saltRounds = 10;
+
+const cors = require("cors");
+app.use(cors());
 
 app.set("views", "./views");
 app.set("view engine", "ejs");
