@@ -44,9 +44,56 @@ app.get('/user', (req, res) => {
     return res.json({msg: "this is user"});
 });
 
+app.post('/dangki', async (req, res) => { 
+    console.log(req.body); 
+
+    // const user = req.body; 
+    // user.password = await hash(user.password); 
+    // const userExist = await checkIfUsernameExist(user.username); 
+    // if (userExist) { 
+    //     return res.json({ 
+    //         error: "User already exist" 
+    //     });user 
+    // } else { 
+    //     await addNewUser(user); 
+
+    //     const token = jwt.sign({ user: user.username }, jwtSecretKey); 
+    //     return res.json({ 
+    //         success: "User added successfully", 
+    //         token: token 
+    //     }); 
+    // } 
+}); 
+
+app.post('/logout', (req, res) => { 
+    // res.clearCookie('jwtToken'); // Clear the token cookie on logout 
+    // return res.status(200).json({ success: 'User logged out successfully' }); 
+}); 
+
+app.post('/login', async (req, res) => { 
+    console.log(req.body); 
+
+    // const user = req.body; 
+    // const userExist = await checkIfUserExist(user); 
+    // console.log('user exist: ', userExist); 
+    // if (userExist) { 
+    //     const token = jwt.sign({ user: user.username }, jwtSecretKey); 
+    //     res.cookie('jwtToken', token, { httpOnly: true }); 
+    //     return res.json({ 
+    //         success: 'User login successfully', 
+    //         token: token, 
+    //     }); 
+    // } else { 
+    //     return res.status(401).json({ 
+    //         error: 'Invalid credentials', 
+    //     }); 
+    // } 
+}); 
+
 /* app.get('/dangki', (req, res) => { */
 /*     res.render('dangki.ejs'); */
 /* }); */
+
 /**/
 /* app.get('/giohang', (req, res) => { */
 /*     return res.render('giohang.ejs'); */
@@ -90,10 +137,12 @@ app.get('/user', (req, res) => {
 /*     } */
 /* }); */
 /**/
+
 /* app.get('/dangnhap', (req, res) => { */
 /*     return res.render('dangnhap.ejs'); */
 /* }); */
 /**/
+
 /* app.post('/dangki', async (req, res) => { */
 /*     console.log(req.body); */
 /*     const user = req.body; */
@@ -113,11 +162,13 @@ app.get('/user', (req, res) => {
 /*         }); */
 /*     } */
 /* }); */
+
 /**/
 /* app.post('/dangxuat', (req, res) => { */
 /*     res.clearCookie('jwtToken'); // Clear the token cookie on logout */
 /*     return res.status(200).json({ success: 'User logged out successfully' }); */
 /* }); */
+
 /**/
 /* const hash = async (password) => { */
 /*     return new Promise((resolve, reject) => { */

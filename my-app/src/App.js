@@ -10,6 +10,7 @@ import './App.css';
 import HomePage from './components/HomePage.js';
 import UserPage from './components/UserPage';
 import AdminPage from './components/AdminPage';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/" Component={HomePage} />
           <Route exact path="/user" Component={UserPage} />
           <Route exact path="/admin" Component={AdminPage} />
+          <Route exact path="/login" Component={Login} />
         </Routes>
       </switch>
     </>
