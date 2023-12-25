@@ -1,0 +1,16 @@
+1. Dang nhap as user
+2. Vao trang /userprofile
+
+1. Dang nhap as admin
+2. Vao trang /administration
+
+NOTE: 
+    user can't go the administration
+
+2 role: 
+    user
+        1 page: 
+            user profile page
+    admin
+        1 page: 
+            users administration page 
