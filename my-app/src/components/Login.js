@@ -6,12 +6,37 @@ class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            something: ""
+            something: "", 
+            role: "admin", 
         };
+    }
+
+    submit = async (event) => {
+        event.preventDefault();
+        if(this.state.role === "admin") { 
+            const url = "http://127.0.0.1:8000/admin"; 
+            // const response = await axios.get(url, {}, {
+            //     auth: {
+            //         username: "abc",
+            //         password: "abc"
+            //     }
+            // });
+
+            const header = "Authorization: Basic YWJjOmFiYw";
+            const response = await axios.get(url, {headers: {header}}); 
+            console.log(response.data);
+            this.setState({
+                something: response.data.msg
+            });
+        }
+        else if(this.state.role === "user") { 
+            const url = "http://127.0.0.1:8000/user"; 
+        }
     }
 
     async componentDidMount() {
         // TODO: calling admin api 
+
         // const response = await axios.get("http://127.0.0.1:5000/admin");
         // console.log(response.data);
         // this.setState({
@@ -37,7 +62,7 @@ class Login extends React.Component {
                         <input type="password" className="form-control" id="inputPassword3" placeholder="Password"/>
                     </div>
                 </div>
-                <button type="submit" className="btn btn-success btn-lg w-100">Sign In</button>
+                <button type="submit" className="btn btn-success btn-lg w-100" onClick={this.submit}>Sign In</button>
                 <a href="">Forgot password? </a>
                 <hr/>
                 <button type="submit" className="toregister btn btn-primary btn-lg w-100">Sign Up New Account</button>
