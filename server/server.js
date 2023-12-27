@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const saltRounds = 10;
+const axios = require('axios');
 
 const cors = require("cors");
 app.use(cors());
@@ -34,14 +35,70 @@ app.use(bodyParser.json());
 
 app.use(cookieParser());
 
-app.get('/admin', (req, res) => {
+app.get('/admin', async (req, res) => {
     // TODO: verify the admin information 
-    return res.json({msg: "this is admin"});
+    // const url = "http://127.0.0.1:8000/admin";
+    // const header = "Authorization: Basic YWJjOmFiYw";
+    // const response = await axios.get(url, {headers: {header}}); 
+    // console.log(response.data);
+    const userList = [
+        {
+          userId: 1,
+          username: 'john_doe',
+          fullName: 'John Doe',
+          email: 'john.doe@example.com',
+          age: 30,
+          isActive: true,
+          roles: ['user']
+        },
+        {
+          userId: 2,
+          username: 'jane_smith',
+          fullName: 'Jane Smith',
+          email: 'jane.smith@example.com',
+          age: 25,
+          isActive: true,
+          roles: ['user']
+        },
+        {
+          userId: 3,
+          username: 'admin_user',
+          fullName: 'Admin User',
+          email: 'admin.user@example.com',
+          age: 40,
+          isActive: true,
+          roles: ['admin']
+        },
+        // Add more users as needed
+      ];
+
+    return res.json(userList);
 });
+
+
 
 app.get('/user', (req, res) => {
     // TODO: verify the user information 
-    return res.json({msg: "this is user"});
+    const userInfo = {
+        userId: 123456,
+        username: 'john_doe',
+        fullName: 'John Doe',
+        email: 'john.doe@example.com',
+        age: 30,
+        address: {
+          street: '123 Main St',
+          city: 'Cityville',
+          state: 'CA',
+          zipCode: '12345',
+          country: 'USA'
+        },
+        isActive: true,
+        preferences: {
+          theme: 'light',
+          language: 'en_US'
+        }
+      };
+    return res.json(userInfo);
 });
 
 app.post('/dangki', async (req, res) => { 
