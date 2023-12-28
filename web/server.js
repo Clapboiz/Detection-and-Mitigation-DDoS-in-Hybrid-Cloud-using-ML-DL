@@ -65,9 +65,9 @@ app.get('/user', async (req, res) => {
         try {
             const decoded = jwt.verify(token, jwtSecretKey);
             console.log("decoded: ", decoded)
-            // const user = await getUser(decoded.user);
-            // console.log("user: ", user);
-            let user; 
+            let user = await getUser(decoded.user);
+            console.log("user: ", user);
+            // let user; 
             if(decoded.user == "admin") {
                 user = {
                     username: "admin", 
