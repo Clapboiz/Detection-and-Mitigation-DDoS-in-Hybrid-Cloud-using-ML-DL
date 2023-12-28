@@ -6,6 +6,10 @@ import numpy as np
 import pandas as pd
 import json
 
+import os
+
+absolute_path = os.path.dirname(__file__)
+
 app = Flask(__name__)
 
 pickle_in = open('model_api_check_rf.pickle', 'rb')
@@ -92,7 +96,12 @@ def home():
 @app.route('/Api_check', methods=['GET'])
 def Api_check():
     dataset_number = 1
-    file_path = f'D:\Programming\ANTOANMANG\Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL\Datasets\dataset_1_train.json'
+    file_path = os.path.join(absolute_path, f'../Datasets/dataset_{dataset_number}_train.json')
+    print("full path", file_path);
+    if os.path.exists(file_path):
+        print("File exists.")
+    else:
+        print("File does not exist.")
     
     input_df = load_data(file_path)
 
