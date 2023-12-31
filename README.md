@@ -41,7 +41,7 @@ run.bat (command prompt)
 **Then open your browser and access:** ```http://localhost:4000/```
 
 <p align="center">
-  <img alt="Project_architerture" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/7c6ded61-abd3-4c9f-8a06-b35b3f4e3700">
+  <img alt="ui_website" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/7c6ded61-abd3-4c9f-8a06-b35b3f4e3700">
 </p>
 
 <p align="center">
@@ -51,7 +51,7 @@ run.bat (command prompt)
 Then go to the predict.txt file to get a benign or malware example to enter for machine detection
 
 <p align="center">
-  <img alt="Project_architerture" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/c771097a-4d14-422b-9a66-94f3fdd6d02a">
+  <img alt="request_benign" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/c771097a-4d14-422b-9a66-94f3fdd6d02a">
 </p>
 
 <p align="center">
@@ -65,7 +65,7 @@ If your request is benign then when you click ok it will forward you to our webs
 when you click ok then it will forward you to the main website
 
 <p align="center">
-  <img alt="Project_architerture" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/ac351c70-5c02-4149-b5c7-538f8d0b2417">
+  <img alt="your_website" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/ac351c70-5c02-4149-b5c7-538f8d0b2417">
 </p>
 
 <p align="center">
@@ -90,16 +90,21 @@ admin
 123123
 ```
 
-
-
 <p align="center">
-  <img alt="Project_architerture" src="">
+  <img alt="user_web" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/06a87c15-4bf9-4851-84eb-d79c004c52c6">
 </p>
 
 <p align="center">
-  Figure 7: Project architecture
+  Figure 5: User's website
 </p>
 
+<p align="center">
+  <img alt="admin_web" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/7b30317e-52d2-4c6e-904c-7f5df2246128">
+</p>
+
+<p align="center">
+  Figure 6: Admin's website
+</p>
 
 ## ARCHITECTURE OF PROJECT
 <p align="center">
