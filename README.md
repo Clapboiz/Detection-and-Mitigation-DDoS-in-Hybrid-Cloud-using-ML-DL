@@ -34,6 +34,8 @@ Here is an example if you want to change version
   Figure 2: Example to config python version
 </p>
 
+You must download the dataset in Datasets/about.md, in this file there will be a link to the original dataset for you to download.
+
 To run this project you must download the necessary libraries for python
 
 <p align="center">
@@ -130,7 +132,7 @@ admin
 
 ## ARCHITECTURE OF PROJECT
 <p align="center">
-  <img alt="Project_architerture" src="https://github.com/Clapboiz/Detection-and-Mitigation-DDoS-in-Hybrid-Cloud-using-ML-DL/assets/112185647/a8959dfc-2cf8-412c-9090-ca914251b64f">
+  <img alt="Project_architerture" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/5804f521-a757-4e05-a465-78f9f0781fd3">
 </p>
 
 <p align="center">
