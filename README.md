@@ -48,6 +48,50 @@ run.bat (command prompt)
   Figure 2: UI of web attack detection
 </p>
 
+Then go to the predict.txt file to get a benign or malware example to enter for machine detection
+
+<p align="center">
+  <img alt="Project_architerture" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/c771097a-4d14-422b-9a66-94f3fdd6d02a">
+</p>
+
+<p align="center">
+  Figure 3: Your request is benign
+</p>
+
+After you press the predict button, the machine will predict for you whether the result of this request is malware or benign
+
+If your request is benign then when you click ok it will forward you to our website, if your request is malware it will block you
+
+when you click ok then it will forward you to the main website
+
+<p align="center">
+  <img alt="Project_architerture" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/ac351c70-5c02-4149-b5c7-538f8d0b2417">
+</p>
+
+<p align="center">
+  Figure 4: Your website
+</p>
+
+We do use authentication and authorization for this site, you can see this in our code
+
+You can create a new user account
+
+And now I will provide you with 2 user and admin accounts so you can test
+
+This is the user's account
+```
+user
+123123
+```
+
+This is the admin's account
+```
+admin
+123123
+```
+
+
+
 <p align="center">
   <img alt="Project_architerture" src="">
 </p>
