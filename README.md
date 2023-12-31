@@ -10,7 +10,7 @@ There are three main types of clouds: private cloud, public cloud, and hybrid cl
 + hybrid cloud: A combination of both public and private cloud
 
 ## HOW TO RUN THIS PROJECT
-### In this project we use python 3.8 (3.8.10), windows, machine learning
+### In this project we use python 3.8 (3.8.10), os: windows, machine learning: random forest, svm.
 
 If you do not want to use python 3.8, you can use another version of python, then go here to modify the version.
 
