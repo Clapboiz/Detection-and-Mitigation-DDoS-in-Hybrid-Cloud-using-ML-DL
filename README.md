@@ -10,7 +10,7 @@ There are three main types of clouds: private cloud, public cloud, and hybrid cl
 + hybrid cloud: A combination of both public and private cloud
 
 ## HOW TO RUN THIS PROJECT
-In this project we use python 3.8 (3.8.10)
+### In this project we use python 3.8 (3.8.10), windows, machine learning
 
 If you do not want to use python 3.8, you can use another version of python, then go here to modify the version.
 
@@ -144,3 +144,5 @@ admin
 [2]. Lavian, S., & Ariel University, Ariel Cyber Innovation Center (ACIC). (2023). The API Traffic Research Dataset Framework (ATRDF) [Data set]. https://github.com/ArielCyber/Cisco_Ariel_Uni_API_security_challenge
 
 [3]. https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices
+
+[4]. https://github.com/mandar196/Fake_News_Classifier_NLP
