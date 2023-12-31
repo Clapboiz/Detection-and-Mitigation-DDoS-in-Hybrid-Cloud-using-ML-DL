@@ -9,13 +9,37 @@ There are three main types of clouds: private cloud, public cloud, and hybrid cl
 
 + hybrid cloud: A combination of both public and private cloud
 
+## HOW TO RUN THIS PROJECT
+In this project we use python 3.8 (3.8.10)
+
+To run this project you must download the necessary libraries for python
+
+<p align="center">
+  <img alt="Project_architerture" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/3b13e42b-b000-4b52-9e9e-f389241d7a85">
+</p>
+
+<p align="center">
+  Figure 1: Python libraries required to run this project
+</p>
+
+You must download all the libraries as shown in the picture. To avoid library conflicts, please go to our Requirements.txt file to view.
+
+<p align="center">
+  <img alt="Project_architerture" src="">
+</p>
+
+<p align="center">
+  Figure 7: Project architecture
+</p>
+
+
 ## ARCHITECTURE OF PROJECT
 <p align="center">
   <img alt="Project_architerture" src="https://github.com/Clapboiz/Detection-and-Mitigation-DDoS-in-Hybrid-Cloud-using-ML-DL/assets/112185647/a8959dfc-2cf8-412c-9090-ca914251b64f">
 </p>
 
 <p align="center">
-  Figure 2: Project architecture
+  Figure 7: Project architecture
 </p>
 
 ## REFERENCES
