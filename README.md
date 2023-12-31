@@ -24,6 +24,30 @@ To run this project you must download the necessary libraries for python
 
 You must download all the libraries as shown in the picture. To avoid library conflicts, please go to our Requirements.txt file to view.
 
+After you download all the above libraries, we proceed to the next step
+
+```
+cd web
+```
+```
+npm install
+```
+```
+.\run.bat (powershell)
+  or
+run.bat (command prompt)
+```
+
+**Then open your browser and access:** ```http://localhost:4000/```
+
+<p align="center">
+  <img alt="Project_architerture" src="https://github.com/Clapboiz/Detection-and-Mitigation-Web-Attack-in-Hybrid-Cloud-using-ML-DL/assets/112185647/7c6ded61-abd3-4c9f-8a06-b35b3f4e3700">
+</p>
+
+<p align="center">
+  Figure 2: UI of web attack detection
+</p>
+
 <p align="center">
   <img alt="Project_architerture" src="">
 </p>
