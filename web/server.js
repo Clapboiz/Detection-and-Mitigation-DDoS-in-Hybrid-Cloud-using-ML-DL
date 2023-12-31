@@ -64,8 +64,24 @@ app.get('/user', async (req, res) => {
     if (token) {
         try {
             const decoded = jwt.verify(token, jwtSecretKey);
-            const user = await getUser(decoded.user);
-            console.log(user);
+            console.log("decoded: ", decoded)
+            let user = await getUser(decoded.user);
+            console.log("user: ", user);
+            // let user; 
+            if(decoded.user == "admin") {
+                user = {
+                    username: "admin", 
+                    email: "HelloAdmin@gmail.com", 
+                    phonenumber: 0978213009, 
+                };
+            }
+            if(decoded.user == "user") {
+                user = {
+                    username: "user", 
+                    email: "HelloUser@gmail.com", 
+                    phonenumber: 09709987009, 
+                };
+            }
             return res.render('userprofile.ejs', { user: user });
         } catch (err) {
             // Handle token verification errors
@@ -122,7 +138,7 @@ app.post('/dangnhap', async (req, res) => {
     console.log(req.body);
     const user = req.body;
     const userExist = await checkIfUserExist(user);
-    console.log('user exist: ', userExist);
+    console.log('user exist: ', userExist, user);
     if (userExist) {
         const token = jwt.sign({ user: user.username }, jwtSecretKey);
         res.cookie('jwtToken', token, { httpOnly: true });

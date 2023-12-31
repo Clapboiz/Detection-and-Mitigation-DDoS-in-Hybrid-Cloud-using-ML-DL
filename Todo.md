@@ -1,3 +1,7 @@
+cd web
+
+python .\RandomForest.py
+
 Sử dụng Kong APi Gateway sau đó sẽ deploy lên azure = k8s, chứ ko sử dụng azure api gateway
 
 **Nguyên:**
