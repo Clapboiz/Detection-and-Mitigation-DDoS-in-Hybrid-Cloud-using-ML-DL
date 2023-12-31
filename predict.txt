@@ -1,0 +1,79 @@
+//This is example Benign
+[
+       {
+            "request": {
+        "headers": {
+            "Host": "127.0.0.1:5000",
+            "User-Agent": "Mozilla/5.0 (X11; OpenBSD amd64; rv:28.0) Gecko/20100101 Firefox/28.0",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept": "*/*",
+            "Connection": "keep-alive",
+            "Accept-Language": "de",
+            "Sec-Fetch-Site": "none",
+            "Sec-Fetch-Mode": "same-origin",
+            "Sec-Fetch-User": "?1",
+            "Sec-Fetch-Dest": "document",
+            "Set-Cookie": "['ck=UYrrg74Ph7dWrlCA9rgXy6qtYSwxuCZK_nBsCp-j5plCUObLpHiPzL7KqnN-K0mGZAYycI0_Uk7BGfZGA0-oyQ; Domain=localhost:5000; Expires=Wed, 21 Dec 2022 18:12:16 GMT', 'uu=DqzDhoc6Y-3WPtBM1AcVAFbk2dJ_fKxTJIWxoUhMtHtTVbG_XkYaKHJdzlcZcBzAQ60q_V3TR0ryhL3qTzJ_sQ; Domain=localhost:5000; Expires=Tue, 06 Dec 2022 18:12:16 GMT', 'session=82ac9c6f-42ae-46f1-98ec-879a4777f624; Expires=Mon, 21 Nov 2022 18:42:16 GMT']",
+            "Date": "Mon, 21 Nov 2022 18:12:16 GMT",
+            "Content-Length": None,
+            "Cookie": None
+        },
+        "method": "GET",
+        "url": "http://127.0.0.1:5000/categories/check/name/2467",
+        "body": "",
+        "Attack_Tag": None
+    },
+    "response": {
+        "status": "404 NOT FOUND",
+        "headers": {
+            "Content-Type": "application/json",
+            "Content-Length": "41",
+            "Location": None,
+            "Set-Cookie": ""
+        },
+        "status_code": 404,
+        "body": "{\"error\": \"Category name not found\"}"
+    }
+       }
+] 
+
+
+//This is example Malware
+[
+{
+        "request": {
+            "headers": {
+                "Host": "127.0.0.1:5000",
+                "User-Agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36",
+                "Accept-Encoding": "gzip, deflate, br",
+                "Accept": "*/*",
+                "Connection": "keep-alive",
+                "Accept-Language": "en-US,en;q=0.9,he;q=0.8",
+                "Sec-Fetch-Site": "none",
+                "Sec-Fetch-Mode": "websocket",
+                "Sec-Fetch-User": "?1",
+                "Sec-Fetch-Dest": "document",
+                "Set-Cookie": "['ck=1KbNopNsu9J_cU9WA1xDIFcPAq0CSvR1qxz21IAyWftQSe2Pgt7BnW8sp_Nz4RWn2ZBFelK2UtOSuErkXOyAWg; Domain=localhost:5000; Expires=Wed, 21 Dec 2022 18:12:16 GMT', 'uu=oC5-wJW1-M_dpD-4inu5CfgBmZSIkcN8bLI11-RF_BAH_u69rTbwV4SiTnCvN_h4HClowehgkVrxP6Aas25rwg; Domain=localhost:5000; Expires=Tue, 06 Dec 2022 18:12:16 GMT', 'session=c28a50b2-cde2-4f5d-9e32-f04cd0b92111; Expires=Mon, 21 Nov 2022 18:42:16 GMT']",
+                "Date": "Mon, 21 Nov 2022 18:12:16 GMT",
+                "Cookie": "username=gASVygAAAAAAAACMCGJ1aWx0aW5zlIwEZXZhbJSTlIyuKGV4ZWMoJycnCmltcG9ydCBvcwpvcy5zeXN0ZW0oInBvd2Vyc2hlbGwgZWNobyAnaGVsbG8gd29ybGQnIikKCmZyb20gY29sbGVjdGlvbnMgaW1wb3J0IG5hbWVkdHVwbGUKVXNlciA9IG5hbWVkdHVwbGUoJ1VzZXInLCBbJ3VzZXJuYW1lJ10pCicnJyksIFVzZXIodXNlcm5hbWU9J1NoZW5pdGEnKSlbLTFdlIWUUpQu",
+                "Content-Length": "0"
+            },
+            "method": "POST",
+            "url": "http://127.0.0.1:5000/cookielogin",
+            "body": "",
+            "Attack_Tag": "Cookie Injection"
+        },
+        "response": {
+            "status": "302 FOUND",
+            "headers": {
+                "Content-Type": "text/html; charset=utf-8",
+                "Content-Length": "211",
+                "Location": "/cookielogin",
+                "Set-Cookie": "username=gASVKgAAAAAAAACMCF9fbWFpbl9flIwGUGVyc29ulJOUKYGUfZSMCHVzZXJuYW1llE5zYi4=; Path=/"
+            },
+            "status_code": 302,
+            "body": "<!doctype html>\n<html lang=en>\n<title>Redirecting...</title>\n<h1>Redirecting...</h1>\n<p>You should be redirected automatically to the target URL: <a href=\"/cookielogin\">/cookielogin</a>. If not, click the link.\n"
+        }
+    }]
+
+
