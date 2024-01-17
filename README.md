@@ -1,4 +1,9 @@
 # DETECTION-AND-MITIGATION-DDOS-IN-HYBRID-CLOUD-USING-ML-DL
+**Project members**
++ Phạm Công Lập (Clap)
++ Nguyễn Trần Trung Nguyên
++ Lương Hồ Trọng Nghĩa
+  
 Application Layer in OSI Model
 
 There are three main types of clouds: private cloud, public cloud, and hybrid cloud.
